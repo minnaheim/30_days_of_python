@@ -19,16 +19,16 @@ tup = list(tup)
 
 # create a function that assigns random numbers 3 times
 def create_randint(start, end, rep):
-    import random
     l = []
     for i in range(rep):
-        int = random.randint(start, end)
-        print(int)
+        int = rd.randint(start, end)
+        l.append(int)
     return l
 
 
 # do random exercises
-# create_randint(1, 12, 3)
+create_randint(1, 12, 3)
+
 # 9: Slice out the middle item or items from the food_stuff_lt list.
 
 food_stuff_lt = ['apples', 'rotten', 'right', 'to', 'the', 'core']
@@ -62,7 +62,7 @@ def remove_at_index(list, index):
 
 
 new_list = remove_at_index(food_stuff_lt, mid)
-print(new_list)
+# print(new_list)
 # ['apples', 'rotten', 'to', 'core']
 
 # 10: Slice out the first three items and the last three items from food_staff_lt list
@@ -71,7 +71,7 @@ food_stuff_lt += 'kamala', 'harris'
 
 food_stuff_lt = food_stuff_lt[3:]
 food_stuff_lt = food_stuff_lt[:-3]
-print(food_stuff_lt)
+# print(food_stuff_lt)
 
 
 # 12:
