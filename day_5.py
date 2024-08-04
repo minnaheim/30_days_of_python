@@ -6,6 +6,7 @@ List: is a collection which is ordered and changeable(modifiable). Allows duplic
 Tuple: is a collection which is ordered and unchangeable or unmodifiable(immutable). Allows duplicate members.
 Set: is a collection which is unordered, un-indexed and unmodifiable, but we can add new items to the set. Duplicate members are not allowed.
 Dictionary: is a collection which is unordered, changeable(modifiable) and indexed. No duplicate members.
+Array: data structure used to store multiple items, vector containing multiple items
 '''
 
 # create lists
