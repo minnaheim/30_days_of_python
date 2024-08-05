@@ -2,7 +2,6 @@
 
 # creating dictionaries
 import day_6
-d = dict
 d = {'key1': 'value1', 'key2': 'value2', 'key3': 'value3', 'key4': 'value4'}
 # exemplary dictionary
 person = {
@@ -70,7 +69,7 @@ day_6.create_randint(1, 11, 3)
 # [10, 4, 2]
 
 # 2: Add name, color, breed, legs, age to the dog dictionary
-dog = dict
+dog = dict()
 dog = {'name': 'ella', 'color': 'black', 'breed': [
     'i', 'dont', 'know'], 'legs': 4, 'age': 7}
 
