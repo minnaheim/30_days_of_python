@@ -24,5 +24,23 @@ def two_sums(nums: list[int], target: int):
 
 
 ts = two_sums([-3, 4, 3, 90], 0)
-print(ts)
+# print(ts)
 # to get a runtime that is not O(n^2), which it is here, is to create a one pass hash map
+
+
+# is Palindrome?
+# Given an integer x, return true if x is a palindrome, and false otherwise.
+
+def is_palindrome(number: int) -> int:
+    number = str(number)
+    if number.startswith('-'):
+        return False
+    s = ''
+    for i in reversed(number):
+        s += i
+    if s == number:
+        return True
+    return False
+
+
+print(is_palindrome(-121))
