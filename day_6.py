@@ -1,4 +1,4 @@
-# lists
+# tuple
 # a list is a collection of different data types that is immutable (unchangeable)
 
 # create a list & important functions

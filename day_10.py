@@ -1,5 +1,5 @@
 # loops
-from countries import countries
+from data.countries import countries
 import day_6
 
 # while loop
