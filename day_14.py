@@ -209,7 +209,7 @@ def sort_by_key(string: str, n: int) -> list:
 
 
 s = sort_by_key('name', 5)
-print(s)
+# print(s)
 
 # now we can do:
 sort_by_key('population', 3)
@@ -226,4 +226,4 @@ def sort_by_category(function, category: str, n: int):
 
 
 s = sort_by_category(sort_by_key, 'population', 5)
-print(s)
+# print(s)
