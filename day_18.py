@@ -2,6 +2,7 @@
 import re
 import math
 from day_6 import create_randint
+import collections
 
 # print(dir(math))
 
@@ -87,9 +88,38 @@ def max_dist(l: list) -> int:
 
 
 m = max_dist(particles)
-# print(m)
+print(m)
 
 
-# 3
+# 3 Write a pattern which identifies if a string is a valid python variable
 
-# 4
+def is_valid_variable(variable: str) -> bool:
+    if re.match('^[0-9]', variable):
+        return False
+    if '-' in variable:
+        return False
+    return True
+
+
+i = is_valid_variable('1-hi')
+print(i)
+
+# 4 Clean the following text. After cleaning, count three most frequent words in the string.
+
+sentence = '''%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?'''
+
+clean = re.sub('[^a-zA-Z ]', '', sentence)
+print(clean)
+
+
+def most_frequent_words(text: str) -> list:
+    words = re.split(' ', clean)
+    # print(words)
+    words = collections.Counter(words)
+    s = sorted(words.items(), key=lambda x: x[1], reverse=True)
+    # s = sorted(words, key=words.get, reverse=True)
+    return s[:5]
+
+
+m = most_frequent_words(clean)
+print(m)
