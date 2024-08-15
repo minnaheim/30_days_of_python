@@ -88,7 +88,7 @@ def max_dist(l: list) -> int:
 
 
 m = max_dist(particles)
-print(m)
+# print(m)
 
 
 # 3 Write a pattern which identifies if a string is a valid python variable
@@ -102,24 +102,24 @@ def is_valid_variable(variable: str) -> bool:
 
 
 i = is_valid_variable('1-hi')
-print(i)
+# print(i)
 
 # 4 Clean the following text. After cleaning, count three most frequent words in the string.
 
 sentence = '''%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?'''
 
-clean = re.sub('[^a-zA-Z ]', '', sentence)
-print(clean)
-
 
 def most_frequent_words(text: str) -> list:
-    words = re.split(' ', clean)
+    # keep only words
+    words = re.sub('[^a-zA-Z ]', '', text)
+    words = re.split(' ', words)
     # print(words)
     words = collections.Counter(words)
     s = sorted(words.items(), key=lambda x: x[1], reverse=True)
     # s = sorted(words, key=words.get, reverse=True)
-    return s[:5]
+    return s[:10]
 
 
-m = most_frequent_words(clean)
-print(m)
+# [('I', 3), ('a', 2), ('teacher', 2), ('and', 2), ('teaching', 2)]
+# m = most_frequent_words(clean)
+# print(m)
